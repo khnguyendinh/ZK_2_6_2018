@@ -1,0 +1,45 @@
+<zk>
+	<style>.z-button i { font-size: 14px; }</style>
+	<window  width="600px" title="Welcome ! New user"
+		border="normal" apply="foo.RegistrationComposer">
+		<grid hflex="1">
+			<columns visible="false">
+				<column />
+				<column />
+			</columns>
+			<auxhead>
+				<auxheader colspan="2" label="Registration Form"
+					style="font-size:16px" image="../../images/picture.png">
+				</auxheader>
+
+			</auxhead>
+			<rows>
+				<row>
+					User Name
+					<textbox id="nameBox" hflex="1"
+						constraint="no empty" />
+				</row>
+				<row>
+					Gender:
+					<radiogroup id="genderRadio">
+						<radio label="Male" value="male"
+							image="../../images/male.png" />
+						<radio label="Female" value="female"
+							image="../../images/female.png" />
+					</radiogroup>
+				</row>
+				<row spans="2" align="center">
+					<hlayout>
+						<checkbox id="acceptTermBox"/> Accept Term of Use
+					</hlayout>
+				</row>
+				<row spans="2" align="right">
+					<hlayout>
+						<button id ="resetButton" label="Reset"/>
+						<button id ="submitButton" label="Submit" disabled="true"/>
+					</hlayout>
+				</row>
+			</rows>
+		</grid>
+	</window>
+</zk>
